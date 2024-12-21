@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ayush</title>
+</head>
+<body>
+    <div>
+        <ul id ="images">url</ul>
+    </div>
+</body>
+
+
+<script>
+
+//*************************************************************************************************************************
+    document.getElementById('xyz').onclick = function(){
+        alert("owl");
+    }
+//************************************************************************************************************************
+
+document.getElementById('owl').addEventListener('click',function(){
+    alert('owl');
+})
+
+//************************************************************************************************************************
+// event object 
+
+document.getElementById('owl').addEventListener('click',function(e){
+    console.log(e);
+},false)
+
+//*****************************************************************************************************************************
+// type, timestamp, defaultPrevent
+// target, toElement, srcElement, currentTarget, clienx, clienty, screenX, screenY
+// altKey, ctrlKey, shiftKey, keyCode
+
+// event propogation
+
+document.getElementById(images).addEventListener('click',function(e){
+    console.log("clicked inside the ul");
+},false)
+
+document.getElementById(owl).addEventListener('click',function(e){
+    console.log("owl clicked");
+    e.stopPropagation()
+},false)
+
+
+document.getElementById('google').addEventListener
+('clicked',function(e){
+    e.PreventDefault();
+    console.log("google clicked");
+},false)
+
+
+
+
+document.querySelector('#image').addEventListener
+('click',function(e){
+   // console.log(e.target.parentNode);
+    console.log(e.target.tagname);
+    if(e.taget.tagname === 'img'){
+    
+        console.log(e.target.id);
+        let removeIt= e.target.parentNode
+    //removeIt.remove()
+
+    
+    }
+    
+})
+
+</script>
+</html>
